@@ -21,7 +21,7 @@
 }
 .numbers div {
   padding: 5px 10px;
-  background-color: #cccccc;
+  /* background-color: #cccccc; */
   border-radius: 50%;
 }
 .message {
@@ -30,4 +30,5 @@
 }
 .active {
   color: #fff;
+  background-color: #7960f2;
 }
