@@ -32,3 +32,17 @@
   color: #fff;
   background-color: #7960f2;
 }
+.open-close {
+  position: fixed;
+  right: 10%;
+  top: 2%;
+  display: inline-block;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background-color: inherit;
+  cursor: pointer;
+}
+.open-close:hover {
+  color: #7960f2;
+}
