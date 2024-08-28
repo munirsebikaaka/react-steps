@@ -1,21 +1,25 @@
 import { useState } from "react";
 
 const stepM = ["CODESMANN DEVS", "ADAM BUSADA", "MOXTECH DEVS"];
+const dayz = ["MON", "TUE", "WEN", "THIR", "FRI", "SAT", "SUN"];
 
 export default function App() {
   const [step, setStep] = useState(1);
   const [isOpen, setisOpen] = useState(true);
   function previous() {
-    if (step > 1) setStep(step - 1);
+    if (step > 1) setStep((s) => s - 1);
   }
   function next() {
-    if (step < 3) setStep(step + 1);
+    if (step < 3) setStep((s) => s + 1);
   }
   function openClose() {
-    setisOpen(!isOpen);
+    setisOpen((isOpen) => !isOpen);
   }
+  
+
   return (
     <div>
+      
       <button onClick={openClose} className="open-close">
         &times;
       </button>
@@ -27,7 +31,7 @@ export default function App() {
             <div className={` ${step >= 3 ? "active" : ""}`}>3</div>
           </div>
           <p className="message">
-            Step {step}: {stepM[step - 1]}
+            Dev {step}: {stepM[step - 1]}
           </p>
           <div className="btns">
             <button

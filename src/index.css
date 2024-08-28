@@ -46,3 +46,7 @@
 .open-close:hover {
   color: #7960f2;
 }
+.count {
+  display: flex;
+  gap: 10px;
+}
