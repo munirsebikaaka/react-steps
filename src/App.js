@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 
 // const stepM = ["CODESMANN DEVS", "ADAM BUSADA", "MOXTECH DEVS"];
 export default function App() {
@@ -21,6 +21,22 @@ export default function App() {
     </div>
   );
   */
+  const [count, setCount] = useState(0);
+  const countRef = useRef(0);
+
+  function workWithRef() {
+    setCount(count + 1);
+    countRef.current++;
+    console.log("STATE", count);
+    console.log("REF", countRef.current);
+  }
+  return (
+    <div>
+      <h1>{count}</h1>
+      <button onClick={workWithRef}>click me</button>
+    </div>
+  );
+
   // const [step, setStep] = useState(1);
   // const [isOpen, setisOpen] = useState(true);
   // function previous() {
